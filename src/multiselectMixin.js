@@ -395,7 +395,7 @@ export default {
     },
     search () {
       this.search = this.search.replace(/-|—|–/, '')
-      this.search = this.search.replace(/\s+/, ' ')
+      this.search = this.search.replace(/\s+/g, ' ')
       this.$emit('search-change', this.search, this.id)
     }
   },
